@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(236, 213, 252);
+        }
+
+        :root {
+            --primary-color: rgb(162, 23, 255);
+            --linkedin-color: #0A66C2;
+            --insta-color: #8134AF;
+            --face-color: #1877F2;
+            --youtube-color: #FF0000;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+        #home {
+            color: whitesmoke;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background: var(--primary-color);
+            height: 250px;
+
+        }
+
+        img {
+            float: right;
+            margin: 20px;
+            margin-right: 80px;
+            width: 192px;
+            border-radius: 20px;
+        }
+
+        .class {
+
+            padding: 30px 20px;
+            color: whitesmoke;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 70px;
+            font-weight: 100;
+            background: var(--primary-color);
+        }
+
+        .character {
+            font-size: 25px;
+            padding: 0px 20px 10px;
+            background: var(--primary-color);
+        }
+
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+
+        }
+
+        .navbar {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 0px;
+            width: 99vw;
+            position: sticky;
+            top: 0;
+            border: 2px solid #222;
+            background: #222;
+            display: flex;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .navi {
+            list-style: none;
+            color: white;
+            margin: 2px 89px;
+            background: #222;
+            z-index: 10;
+        }
+
+        li .atri {
+            color: white;
+            text-decoration: none;
+            background: #222;
+        }
+
+        #about {
+            background-color: rgb(255, 255, 255);
+            margin-top: 20px;
+            color: #000000;
+            width: 90vw;
+            margin-left: 10px;
+            padding: 5px;
+            font-size: 18px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .hii {
+            background: white;
+            font-size: 40px;
+        }
+
+        .info {
+
+            background: white;
+        }
+
+
+
+        #social {
+            font-size: 32px;
+            margin: 0px 10px 0px 10px;
+            padding: 0px 0px 0px 05px;
+            background: white;
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+
+        }
+
+        .title {
+            margin: 0px;
+            background: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 40px;
+            font-optical-sizing: auto;
+            font-weight: 750;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
+        }
+
+        .linkedin {
+            margin: 20px;
+            font-size: 50px;
+            width: 50vw;
+            height: 25vh;
+            padding: 5px;
+            background: #E6F0FA;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            color: #0A66C2;
+            border: 2px solid #0A66C2;
+            border-radius: 15px;
+        }
+
+        #linkbgimg {
+            width: 7em;
+            height: 3.2em;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        #linkimg {
+            width: 6vw;
+            height: 13vh;
+            border: 6px solid white;
+            border-radius: 159px;
+            position: absolute;
+            right: 13.5em;
+            top: 18.5em;
+            z-index: 1;
+        }
+
+        #linklink {
+            align-items: center;
+            width: 9vw;
+            height: 5vh;
+            padding: 10px 0px 0px 20px;
+            border-radius: 30px;
+            align-items: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            position: absolute;
+            background: var(--linkedin-color);
+            right: 52em;
+            top: 50.5em;
+            z-index: 1;
+
+        }
+
+        .linkedinlink {
+            border-radius: 30px;
+            background: var(--linkedin-color);
+            color: white;
+            text-decoration: none;
+            z-index: 1;
+        }
+
+        .insta {
+            margin: 20px 0px 0px 610px;
+            font-size: 50px;
+            width: 50vw;
+            height: 25vh;
+            padding: 5px;
+            background: #d7bce7;
+            font-family: 'Pacifico', cursive;
+            color: var(--insta-color);
+            border: 2px solid var(--insta-color);
+            border-radius: 15px;
+        }
+
+        #instaimg {
+            width: 10vw;
+            height: 20vh;
+            border: 6px solid white;
+            border-radius: 159px;
+            position: absolute;
+            right: 1.5em;
+            top: 22em;
+            z-index: 1;
+        }
+
+        #instalink {
+            align-items: center;
+            width: 9vw;
+            height: 5vh;
+            padding: 10px 0px 0px 20px;
+            border-radius: 30px;
+            align-items: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            position: absolute;
+            background: var(--insta-color);
+            right: 17em;
+            top: 60.25em;
+            z-index: 1;
+
+        }
+
+        #instalink .instagramlink {
+            background: var(--insta-color);
+            border-radius: 30px;
+
+            color: white;
+            text-decoration: none;
+            z-index: 1;
+        }
+
+        .facebook {
+            margin: 20px;
+            font-size: 50px;
+            width: 50vw;
+            height: 25vh;
+            padding: 5px;
+            background: #a4c0e6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--face-color);
+            border: 2px solid var(--face-color);
+            border-radius: 15px;
+        }
+
+        #facebgimg {
+            width: 7em;
+            height: 3.2em;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        #faceimg {
+            width: 9vw;
+            height: 18vh;
+            border: 6px solid white;
+            border-radius: 159px;
+            position: absolute;
+            right: 13em;
+            top: 26em;
+            z-index: 1;
+        }
+
+        #facelink {
+            align-items: center;
+            width: 9vw;
+            height: 5vh;
+            padding: 10px 0px 0px 20px;
+            border-radius: 30px;
+            align-items: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            position: absolute;
+            background: var(--face-color);
+            right: 52em;
+            top: 70em;
+            z-index: 1;
+
+        }
+
+        #facelink .facebooklink {
+            background: var(--face-color);
+            border-radius: 30px;
+
+            color: white;
+            text-decoration: none;
+            z-index: 1;
+        }
+
+        .youtube {
+            margin: 20px 0px 20px 610px;
+            font-size: 50px;
+            width: 50vw;
+            height: 25vh;
+            padding: 5px;
+            background: #e9c4c4;
+            font-family: "Roboto", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 700;
+            font-style: normal;
+            font-variation-settings:
+                "wdth" 100;
+            color: var(--youtube-color);
+            border: 2px solid var(--youtube-color);
+            border-radius: 15px;
+        }
+
+        #youimg {
+            width: 10vw;
+            height: 20vh;
+            border: 6px solid white;
+            border-radius: 159px;
+            position: absolute;
+            right: 1.5em;
+
+            top: 30em;
+            z-index: 1;
+        }
+
+        #youlink {
+            align-items: center;
+            width: 9vw;
+            height: 5vh;
+            padding: 10px 0px 0px 20px;
+            border-radius: 30px;
+            align-items: center;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            position: absolute;
+            background: var(--youtube-color);
+            right: 17em;
+            top: 79.75em;
+            z-index: 1;
+
+        }
+
+        #youlink .youtubelink {
+            background: var(--youtube-color);
+            border-radius: 30px;
+
+            color: white;
+            text-decoration: none;
+            z-index: 1;
+        }
+
+        #exp {
+            width: 70vw;
+        }
+
+        .experience,
+        h1,
+        h3,
+        h4,
+        .list {
+            margin: 50px 20px 0px 20px;
+            background: white;
+            font-size: 20px;
+        }
+
+        .experience h1 {
+            font-size: 40px;
+            margin-top: 20px;
+        }
+
+        .list {
+            margin-top: 20px;
+        }
+
+        .list li {
+            list-style: disc;
+            margin: 10px 0px 0px 20px;
+            background: white;
+        }
+
+        h3,
+        h4 {
+            margin: 20px 0px 10px 20px;
+            font-size: 25px;
+        }
+
+        #contact,
+        .box,
+        .h1,
+        p {
+            width: 100vw;
+            background: black;
+            color: white;
+        }
+
+        .box {
+            margin-top: 40px;
+            border: 2px solid white;
+            width: 101vw;
+            height: 0.25em;
+        }
+
+        .h1 {
+            font-size: 40px;
+            margin-top: 20px;
+        }
+
+        .somedia,
+        .li {
+            margin-left: 20px;
+            padding-bottom: 30px;
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section id="home">
+        <img src="Images/Profile.png" alt="Profile img">
+        <div class="class">
+            Sudhir P. Warpe
+        </div>
+        <div class="character">
+            Humble | Inspring | Cool-Minded
+
+        </div>
+    </section>
+
+    <nav class="nav">
+        <ul class="navbar">
+            <li class="navi"><a href="#home" class="atri">|Home|</a></li>
+            <li class="navi"><a href="#about" class="atri">|About Me|</a></li>
+            <li class="navi"><a href="#social" class="atri">|Social Media|</a></li>
+            <li class="navi"><a href="#exp" class="atri">|Experience|</a></li>
+            <li class="navi"><a href="#contact" class="atri">|Contact|</a></li>
+        </ul>
+    </nav>
+    <br>
+    <section id="about">
+        <div class="hii">
+            About Me
+        </div>
+        <div class="info">
+            ⚫ In a world where loud voices often dominate, he shines through quiet strength, humility, and wisdom. A man
+            of values and integrity, he carries himself with a rare calmness that makes people feel at ease in his
+            presence. He is not someone who seeks the spotlight, yet he naturally becomes the center of respect and
+            admiration wherever he goes. His cool-minded nature allows him to handle difficult situations with grace,
+            patience, and clear thinking. Whether it's personal life, professional decisions, or helping others navigate
+            challenges, he remains composed and thoughtful always thinking a step ahead.
+            <br>
+            ⚫ One of the most striking qualities about him is his humility. Despite having achieved much in life, he
+            never
+            boasts about his accomplishments. Instead, he listens more than he speaks, and when he does speak, his words
+            carry wisdom and purpose. He believes that true greatness lies in lifting others, not in seeking praise for
+            oneself. People often turn to him for advice, comfort, or motivation—not because he tells them what they
+            want to hear, but because he tells them what they need to hear, in the most understanding and respectful
+            way.
+            <br>
+            ⚫ He is an inspiring figure to many, not just because of what he does, but because of who he is. Whether
+            mentoring young minds, guiding his colleagues, or simply being there for his family and friends, he makes a
+            lasting impact. His motivational spirit doesn't rely on grand gestures; it's found in the small, consistent
+            ways he encourages others—reminding them of their worth, helping them see their potential, and pushing them
+            to believe in themselves.
+            <br>
+            ⚫ He leads by example. In his work, he is focused, disciplined, and driven by purpose. In his relationships,
+            he is kind, loyal, and dependable. He finds balance in life not by avoiding challenges, but by facing them
+            with maturity and a positive attitude. His sense of responsibility is unmatched, and he gives his best in
+            everything he does—whether big or small. He has a vision not just for himself, but for the people around
+            him, always aiming to create a better, more meaningful future.
+            <br>
+            ⚫ Those who know him describe him as a true gentleman, a motivator, and someone you can always count on. His
+            presence is both calming and energizing—a rare mix that leaves a lasting impression on everyone he meets. He
+            inspires others not by trying to impress, but by simply being real, grounded, and deeply human.
+            <br>
+            ⚫ In every sense, he is a role model—a man who lives with purpose, inspires with action, and leads with
+            heart.
+
+        </div>
+    </section>
+    <br>
+    <section id="social">
+        <div class="title"> Social Media Handles
+        </div>
+        <div class="linkedin">
+            Linked In
+            <img id="linkbgimg" src="Images/Annotation 2025-06-07 085947.png" alt="">
+            <img src="Images/Annotation 2025-06-07 091522.png" alt="" id="linkimg">
+            <div id="linklink">
+                <a href="https://in.linkedin.com/in/sudhir-warpe-3a552311" target="_blank" class="linkedinlink">Click
+                    Here</a>
+            </div>
+
+        </div>
+        <div class="insta">
+            Instagram
+            <img src="Images/Annotation 2025-06-07 150420.png" alt="" id="instaimg">
+            <div id="instalink">
+                <a href="https://www.instagram.com/sudhirwarpe/" target="_blank" class="instagramlink">Click Here</a>
+            </div>
+
+        </div>
+        <div class="facebook">
+            Facebook
+            <img id="facebgimg" src="Images/Annotation 2025-06-07 150310.png" alt="">
+            <img src="Images/Annotation 2025-06-07 150420.png" alt="" id="faceimg">
+            <div id="facelink">
+                <a href="https://www.facebook.com/sudhirwarpe/" target="_blank" class="facebooklink">Click Here</a>
+            </div>
+
+        </div>
+        <div class="youtube">
+            YouTube
+            <img src="Images/Annotation 2025-06-07 154800.png" alt="" id="youimg">
+            <div id="youlink">
+                <a href="https://www.youtube.com/channel/UCmrsK1UI_L6uyLX7Mi11Ggg/videos?app=desktop" target="_blank"
+                    class="youtubelink">Click Here</a>
+            </div>
+
+        </div>
+        <br>
+    </section>
+
+    <section id="exp">
+        <div class="experience">
+            <h1>Experience</h1>
+            <h3>🔷 NTPC Limited — 17+ Years </h3>
+
+            <h4> Dy. General Manager (Fuel Management) | Apr 2022 – Present | Vijayapur </h4>
+            <ul class="list">
+                <li> Fuel accounting & contract management</li>
+
+                <li> Payment & import coordination</li>
+
+                <li> Supply chain coordination</li>
+
+                <li> Exploring new fuel tie-ups</li>
+
+            </ul>
+            <h4> Sr. Manager (Operation Management) | Apr 2018 – Mar 2022 | Vijayapur</h4>
+            <ul class="list">
+                <li> Operations for 2400 MW Supercritical Plant (NTPC Kudgi)</li>
+
+                <li> Improved plant flexibility to integrate RE power</li>
+
+                <li> Focused on reducing startup time & efficiency enhancement</li>
+
+            </ul>
+            <h4> New Business Development Manager (NVVN) | Jan 2015 – Apr 2018 | New Delhi</h4>
+            <ul class="list">
+
+                <li> Bid document development for National Solar Mission</li>
+
+                <li> Consultancy for rooftop solar projects</li>
+
+                <li> Drafting PPAs & business tie-ups with IPPs</li>
+
+                <li> Explored cross-border power trade opportunities</li>
+            </ul>
+            <h4> Deputy Manager | Sep 2012 – Mar 2015 | Ratnagiri (RGPPL)</h4>
+            <ul class="list">
+
+                <li> Pollution Control Board compliance</li>
+
+                <li> EMS development & ISO 14001 coordination</li>
+
+                <li> Environmental performance improvement & energy conservation</li>
+
+            </ul>
+            <h4> Sr. Engineer | Apr 2005 – Oct 2012 | Korba (NTPC Korba STPS)</h4>
+            <ul class="list">
+                <li> Operated 210MW & 500MW units (BHEL & KWU)</li>
+
+                <li> Process optimization & emergency handling</li>
+
+                <li> Managed offsite systems & trained new engineers</li>
+            </ul>
+            <h3> 🔷 KPCL — 2 Years</h3>
+
+            <h4> Operation Engineer | Mar 2003 – Mar 2005 | Raichur TPS</h4>
+            <ul class="list">
+
+                <li> Handled 210MW BHEL thermal unit with DCS system</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="box"></div>
+        <h1 class="h1">Contact</h1>
+        <p>Name:-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sudhir P. Warpe</p>
+        <p>Designation:-&nbsp;&nbsp;General Manager, NTPC</p>
+        <p>Email:-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sudhirwarpe@gmail.com</p>
+        <p>Phone No:- &nbsp;&nbsp;&nbsp;123456789</p>
+        <p>Location:-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Karnataka, Vijayapur</p>
+        <p>Social Media:-
+
+        <ul class="somedia">
+            Linked In: <a href="https://in.linkedin.com/in/sudhir-warpe-3a552311" target="_blank"
+                class="li">https://in.linkedin.com/in/sudhir-warpe-3a552311</a>
+            <br>
+            Instagram: <a href="https://www.instagram.com/sudhirwarpe/" target="_blank"
+                class="li">https://www.instagram.com/sudhirwarpe/</a>
+            <br>
+            Facebook: <a href="https://www.facebook.com/sudhirwarpe/" target="_blank"
+                class="li">https://www.facebook.com/sudhirwarpe/</a>
+            <br>
+            YouTube:<a href="https://www.youtube.com/channel/UCmrsK1UI_L6uyLX7Mi11Ggg/videos?app=desktop"
+                target="_blank"
+                class="li">https://www.youtube.com/channel/UCmrsK1UI_L6uyLX7Mi11Ggg/videos?app=desktop</a>
+        </ul>
+        </p>
+
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
